@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #{{ site.data.template.color.secondary-dark }};
 }
 
@@ -879,4 +879,29 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
+}
+
+/* vessel */
+.calci{
+    background-image: linear-gradient(to bottom, #000000, #9d9dfd, #c1c1ff, #d9d9ff, #ccd9ff, #d2dcf9, #bbc8e7, #c1d5ff, #a6c1ff, #8dadff, #7698ff, #6083ff);
+}
+@media only screen and (max-width:767px){
+    .calci{
+        background-image: linear-gradient(to bottom, #ffffff, #f2f1fe, #e2e4fd, #d1d8fc, #bcccfc, #acc2fc, #9cb8fd, #8aaffd, #7ea4fe, #729aff, #688eff, #6083ff);
+    }
+}
+.capt{
+    text-align: center;
+    font-weight: 600;
+}
+
+form{
+    padding: 50px;
+    /* background-color: rgb(192, 136, 245); */
+}
+.form-control, .form-check{
+    margin: 5px;
+}
+.useful-data{
+    font-weight:550;
 }

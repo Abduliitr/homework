@@ -1,0 +1,101 @@
+<section id="vesselSection" class="calci">
+    <h2 class="capt">Shell Thickness Calculation</h2>
+    <form name="calc">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <input type="number" class="form-control" name="temp" placeholder="Operating Temperature (in K)">
+            
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                        Unheated Parts(Tw+0)
+                        </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                        Heating by steam(Tw+10)
+                        </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                        <label class="form-check-label" for="gridRadios3">
+                            Heating by fluegas/electricity - shielded parts (Tw+20)
+                        </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4">
+                        <label class="form-check-label" for="gridRadios4">
+                            Extreme Heating / Severe Exothermic rxn- Unshielded parts (Tw+50)
+                        </label>
+                </div>
+                <label style="padding-top:5px;color:blue;margin:5px;"><b>Design Temperature(Td) is:</b></label>
+                <input class="form-control" name="design-temp" id="design-temp" type="number" readonly>
+                <input type="number" class="form-control" name="Fa" placeholder="Allowable Stress (in N/m^2) - [Based on Your MOC & Td]">    
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <input type="number" class="form-control" name="prr" placeholder="Operating Pressure (in Pa)">
+            
+                <input type="number" class="form-control" name="liquid-head" placeholder="Liquid-head (in Pa)">
+
+                <label style="padding-top:5px;color:blue;margin:5px;"><b>Design Pressure(Pd) is:</b></label>
+                <input class="form-control" name="design-prr" id="design-prr" type="number" readonly>
+
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                            <input type="number" class="form-control" name="Di" placeholder="Internal Dia. (in m)">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 align-self-center"><label style="padding-top:5px;margin:5px;text-align: center;">OR</label></div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                            <input type="number" class="form-control" name="Ca" placeholder="Outer Dia. (in m)">
+                    </div>
+                </div>
+                <input type="number" class="form-control" name="Ca" placeholder="Corrosion Allowance (in mm)">
+                <input type="number" class="form-control" name="J" placeholder="Weld Joint Efficiency Factor(J) [using below data]">
+            </div>
+        </div>
+        <div class="row" style="margin-top:50px;background-color:brown;padding-bottom:20px;">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                    <label style="padding-top:5px;color:rgb(215, 215, 255);margin:5px;"><b>Theoretical Thickness(Tth, in mm) is:</b></label>
+                    <input class="form-control" name="Tth" id="Tth" type="number" readonly>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                    <label style="padding-top:5px;color:rgb(215, 215, 255);margin:5px;"><b>Thickness with Ca(Tth+Ca, in mm) is:</b></label>
+                    <input class="form-control" name="t-dash" id="t-dash" type="number" readonly>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                    <label style="padding-top:5px;color:rgb(215, 215, 255);margin:5px;"><b>Standard Thickness(Tstd, in mm) is:</b></label>
+                    <input class="form-control" name="Tstd" id="Tstd" type="number" readonly>
+            </div>
+        </div>
+        <div class="row" style="margin-top:50px;">
+            <h4>Useful DATA:</h4>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <ul class="useful-data">
+                    <li>Class I:</li>
+                    <ol>
+                        <li>J=1.0, for fully radiographed joints.</li>
+                        <li>J=0.9, for single welded butt joints with backing strips.</li>
+                    </ol>
+                    <li>Class II:</li>
+                    <ol>
+                        <li>J=0.85, for double welded butt joints with full penetration.</li>
+                        <li>J=0.80, for single welded butt joints with backing strips.</li>
+                    </ol>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <ul class="useful-data">
+                    <li>Class III:</li>
+                        <ol>
+                            <li>J=0.70, for double welded butt joints with full penetartion.</li>
+                            <li>J=0.65, for single welded butt joints with backing strip.</li>
+                            <li>J=0.60, for single welded butt joints with backing strip which may not remain in place.</li>
+                            <li>J=0.55, for single welded butt joints without backing strip</li>
+                            <li>J=0.50, for single full lap joints for circumferential seams only.</li>
+                        </ol>
+                    </ul>
+            </div>
+        </div>
+      </form>
+</section>
